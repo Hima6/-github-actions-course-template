@@ -3,9 +3,9 @@ const fs = require('fs')
 
 describe('App', () => {
   it('Contains the compiled JavaScript', async (done) => {
-    fs.readFile('./public/main.js', 'utf8', (err, data) => {
+    fs.readFile('./public/main.js', 'utf8', (err, data1) => {
       expect(err).toBe(null)
-      expect(data).toMatchSnapshot()
+      expect(data1).toMatchSnapshot()
       done()
     })
   })
